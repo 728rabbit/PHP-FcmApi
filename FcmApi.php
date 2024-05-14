@@ -31,7 +31,7 @@ class FcmApi {
         $this->_project_id = ((!empty($data['project_id']))?$data['project_id']:'');
     }
     
-    public function setConfig($data = []) {
+    public function init($data = []) {
         $this->_serviceAccountKeyFile = ((!empty($data['path']))?$data['path']:'');
         $this->_project_id = ((!empty($data['project_id']))?$data['project_id']:'');
         
