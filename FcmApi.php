@@ -13,7 +13,7 @@ if($result = $FcmApi->setMessage(
     'title' => 'Hi', 
     'body' => 'Hello World!'
 ])->send($token)) {
-    dump($result);
+    echo 'Message sent successfully. Message ID: '. $result['name'];
 }   
 else {
     echo $FcmApi->getError();
