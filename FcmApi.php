@@ -27,14 +27,18 @@ class FcmApi {
     private $_error = '';
 
     public function __construct($data = []) {
-        if(!empty($data['path'])) {
-            $this->_serviceAccountKeyFile = ((!empty($data['path']))?$data['path']:'');
-        }
-        if(!empty($data['project_id'])) {
-            $this->_project_id = ((!empty($data['project_id']))?$data['project_id']:'');
-        }
+        $this->_serviceAccountKeyFile = ((!empty($data['path']))?$data['path']:'');
+        $this->_project_id = ((!empty($data['project_id']))?$data['project_id']:'');
     }
     
+    public function setConfig($data = []) {
+        $this->_serviceAccountKeyFile = ((!empty($data['path']))?$data['path']:'');
+        $this->_project_id = ((!empty($data['project_id']))?$data['project_id']:'');
+        
+        return $this;
+    }
+
+
     public function setMessage($data = []) {
         $this->_message = 
         [
