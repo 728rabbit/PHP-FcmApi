@@ -1,24 +1,4 @@
 <?php
-/* 
-require app_path('Libraries/FcmApi.php');
-$FcmApi = new \FcmApi(
-[
-    'path' => 'your_firebase_adminsdk_json_file', 
-    'project_id' => 'your_firebase_project_id'
-]);
-
-$token = 'your_target_device_token';
-if($result = $FcmApi->setMessage(
-[
-    'title' => 'Hi', 
-    'body' => 'Hello World!'
-])->send($token)) {
-    echo 'Message sent successfully. Message ID: '. $result['name'];
-}   
-else {
-    echo $FcmApi->getError();
-}
-*/
 class FcmApi {
     private $_serviceAccountKeyFile = '';
     private $_authData = [];
